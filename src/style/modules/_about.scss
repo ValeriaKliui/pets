@@ -1,0 +1,28 @@
+.about {
+    @include lightBg;
+}
+
+.about__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 90px;
+    padding: 0 135px;
+}
+
+.about__title {
+    max-width: 370px;
+}
+
+.about__text {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 1;
+}
+
+.about__img {
+    flex: 1;
+    max-height: 400px;
+    object-fit: contain;
+}

@@ -1,0 +1,35 @@
+.donations {
+    @include darkBg;
+}
+
+.donations__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    padding: 0 135px;
+}
+
+.donations__title {
+    max-width: 310px;
+}
+
+.donations__text {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 1;
+}
+
+.donations__img {
+    flex: 1;
+    max-height: 260px;
+    object-fit: contain;
+}
+.bank_info {
+    display: flex;
+    max-width: 310px;
+    gap: 15px;
+    border-radius: 9px;
+    padding: 10px 15px;
+}

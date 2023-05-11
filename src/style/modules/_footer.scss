@@ -1,0 +1,31 @@
+.footer {
+    background-image: url('../../img/footer.png');
+    background-repeat: no-repeat;
+    h3 {
+        color: $color-light-xl;
+    }
+}
+.footer__wrapper {
+    display: flex;
+    padding-top: 40px;
+    gap: 80px;
+}
+.footer__item {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 40px;
+}
+.footer__img {
+    background-image: url('../../img/footer-puppy.png');
+    background-position: top 10px right;
+    background-repeat: no-repeat;
+}
+.contacts__item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.contacts__item_last {
+    margin-bottom: 40px;
+}
