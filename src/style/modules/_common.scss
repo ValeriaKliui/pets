@@ -109,6 +109,11 @@ button {
         border: 3px solid $color-primary-light;
     }
 }
+.active {
+    cursor: url('../../img/icons/pointer.svg'), pointer;
+    background-color: $color-primary-light;
+    border: 3px solid $color-primary-light;
+}
 
 .arrow {
     background-color: transparent;
@@ -165,7 +170,12 @@ background-position: center;
     background-color: $color-light-s;
     padding-bottom: 30px;
     gap: 30px;
+    &:hover {
+        background-color:$color-light-xl;
+    }
+
 }
+
 
 // @media {
 //     //для мобилки 
