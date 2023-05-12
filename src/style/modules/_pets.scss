@@ -16,3 +16,33 @@
 max-width: 370px;
 text-align: center;
 }
+.pets-card-title {
+    @include makeFonts(400, 20px, 23px, $letter-spacing: 0.06em);
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 40px;
+}
+.controllers {
+    display: flex;
+    gap: 20px;
+}
+.active-page {
+    background-color: $color-primary;
+    background-image: unset;
+}
+.controller {
+    background-image: url(/src/img/icons/controller.svg);
+}
+.controller_right {
+    transform: rotate(180deg);
+}
+.controller_double {
+    background-image: url(/src/img/icons/controller-double.svg);
+}
+.controller_double_right {
+    transform: rotate(180deg);
+}

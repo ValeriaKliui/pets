@@ -1,14 +1,16 @@
 .start-screen__wrapper {
-display: flex;
+    display: flex;
 }
+
 .start-screen__text {
     display: flex;
     flex-direction: column;
-gap: 42px;
-flex: 1;
-min-height: 800px;
-justify-content: center;
+    gap: 42px;
+    flex: 1;
+    min-height: 800px;
+    justify-content: center;
 }
+
 .start-screen__img {
     flex: 2;
     background-image: url('../../img/start-screen-puppy.png');

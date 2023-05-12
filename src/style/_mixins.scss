@@ -10,6 +10,10 @@
     @if $color  != $color-dark-l{
         color: $color;
     }
+    @if ($color  == $color-dark-l){
+        color: $color-dark-l;
+    };
+    
     @if $letter-spacing  != 0 {
         letter-spacing: $letter-spacing;
     }

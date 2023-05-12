@@ -1,3 +1,24 @@
 .help {
     @include lightBg;
+    padding: 80px 80px;
     }
+.help__container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    gap: 100px;
+    margin-bottom: 50px;
+}
+.help__title {
+    margin-bottom: 80px;
+}
+.help__item {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  width: 100px;
+  height: 100px;
+  gap: 30px;
+}

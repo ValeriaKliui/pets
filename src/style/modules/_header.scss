@@ -2,9 +2,25 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 30px;
+    padding: 30px;
 }
 .navigation__list {
     display: flex;
     gap: 35px;
+}
+
+.header_pets {
+    background-image: none;
+    background-color: $color-light-xl;
+}
+.header_light {
+    .logo__title {
+        color: $color-dark-l;
+    }
+    .logo__subtitle {
+        color: $color-dark-3xl;
+    }
+    .paragraph-l a  {
+        color: $color-dark-l;
+    }
 }

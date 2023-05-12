@@ -25,6 +25,9 @@
     display: flex;
     align-items: center;
     gap: 15px;
+    h4 {
+        color: $color-primary;
+    }
 }
 .contacts__item_last {
     margin-bottom: 40px;

@@ -3,6 +3,7 @@
 html {
     box-sizing: border-box;
     scroll-behavior: smooth;
+    cursor: url('../../img/icons/cursor.svg'), default;
 }
 
 *,
@@ -14,11 +15,21 @@ html {
 a {
     text-decoration: none;
     color: $color-dark-s;
+
     &:hover,
     &:active {
         border-bottom: 3px solid $color-primary;
         cursor: url('../../img/icons/pointer.svg'), pointer;
+        margin-bottom: -3px;
     }
+}
+
+.active {
+    border-bottom: 3px solid $color-primary;
+}
+
+img {
+    display: block;
 }
 
 ul {
@@ -29,44 +40,53 @@ h2 {
     @include makeFonts(400, 44px, 130%, $color: $color-light-xl);
     font-weight: 400;
 }
+
 h3 {
     @include makeFonts(400, 35px, 130%, $letter-spacing: 0.06em);
     font-weight: 400;
 }
+
 h4 {
-    @include makeFonts(400, 20px, 115%, $letter-spacing: 0.06em, $color: $color-primary);
+    @include makeFonts(400, 20px, 115%, $letter-spacing: 0.06em, $color: $color-dark-l);
     font-weight: 400;
 }
+
 h5 {
     @include makeFonts(400, 15px, 110%, $letter-spacing: 0.06em);
     font-weight: 400;
 }
+
 .paragraph-l {
     @include makeFonts(400, 15px, 160%, 'Arial Regular', $color: $color-dark-s);
 }
+
 .paragraph-s {
     @include makeFonts(400, 12px, 150%, 'Arial Regular');
     font-style: italic;
 }
+
 .logo__title {
-    @include makeFonts(400, 32px, 110%, $letter-spacing: 0.06em, $color:$color-primary);
+    @include makeFonts(400, 32px, 110%, $letter-spacing: 0.06em, $color: $color-primary);
     margin-bottom: 0;
 }
+
 .logo__subtitle {
-    @include makeFonts(400, 13px, 15px,'Arial Regular', 0.1em, $color-light-xl);
+    @include makeFonts(400, 13px, 15px, 'Arial Regular', 0.1em, $color-light-xl);
     margin-top: 0;
 }
+
 .donation__description {
-    @include makeFonts(400, 12px, 18px,'Arial Regular', $color:$color-dark-m);
+    @include makeFonts(400, 12px, 18px, 'Arial Regular', $color: $color-dark-m);
     font-style: italic;
 }
+
 body {
     background-color: $color-light-l;
-    cursor: url('../../img/icons/cursor.svg'), default;
     @include makeFonts(400, 15px, 160%, 'Arial Regular');
     max-width: 1280px;
     margin: 0 auto;
 }
+
 button {
     background-color: $color-primary;
     border-radius: 100px;
@@ -75,40 +95,84 @@ button {
     max-width: 265px;
     display: block;
     @include makeFonts(400, 17px, 130%, $letter-spacing: 0.06em, $color: $color-dark-3xl);
+
     &:hover,
-    &:active  {
+    &:active {
         cursor: url('../../img/icons/pointer.svg'), pointer;
         background-color: $color-primary-light;
     }
-    &:inactive {
-        background-color: none;
-        border-radius: 1px solid $color-primary;
+}
+.disabled {
+    background-color: transparent;
+    border: 3px solid $color-primary;
+    &:hover {
+        border: 3px solid $color-primary-light;
     }
 }
+
+.arrow {
+    background-color: transparent;
+    border: 3px solid $color-primary;
+border-radius: 100px;
+width: 52px;
+height: 52px;
+padding: 0;
+background-image: url(/src/img/icons/Arrow.svg);
+background-repeat: no-repeat;
+background-position: center;
+&:hover {
+    border: 3px solid $color-primary-light;
+}
+}
+.arrow_right {
+    transform: rotate(180deg);
+}
+.arrow_unactive {
+    border: 3px solid $color-dark-s;
+}
+
 .wrapper {
     max-width: 1280px;
     margin: 0 auto;
     padding: 0 40px;
 }
+
 .logo {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
+
 .start-screen,
 .header {
     background-size: 100%;
-  background-image: url('/src/img/Start-screen.png');
-  background-repeat: no-repeat;
-//   background-position: center;
-  background-attachment: fixed; /* !!! */
+    background-image: url('/src/img/Start-screen.png');
+    background-repeat: no-repeat;
+    //   background-position: center;
+    background-attachment: fixed;
+    /* !!! */
 }
+
+.slider {
+    display: flex;
+    gap: 90px;
+    align-items: center;
+}
+.pets__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $color-light-s;
+    padding-bottom: 30px;
+    gap: 30px;
+}
+
 // @media {
 //     //для мобилки 
 //     h3 {
-    // @include makeFonts(400, 25px, 130%, $letter-spacing: 0.06em);
+// @include makeFonts(400, 25px, 130%, $letter-spacing: 0.06em);
 //     }
 //     .paragraph-mobile-menu {
-    // @include makeFonts(400, 32px, 160%, 'Arial Regular');
+// @include makeFonts(400, 32px, 160%, 'Arial Regular');
 //     }
 // }
