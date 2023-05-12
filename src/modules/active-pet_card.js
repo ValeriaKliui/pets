@@ -2,12 +2,14 @@ let shinedButton;
 
 function shineActiveButton(){
     let gallery = document.querySelector('.gallery');
+    if (gallery) {
     gallery.onmouseover =(event)=>{
         let target = event.target;
         if (target.closest('.pets__card')){
         shineButton(target.closest('.pets__card'));
         }
     }
+}
 }
 
 function shineButton(card){

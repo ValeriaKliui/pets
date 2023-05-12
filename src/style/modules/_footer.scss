@@ -3,24 +3,66 @@
     background-repeat: no-repeat;
     h3 {
         color: $color-light-xl;
+        @media (max-width:767px) {
+            text-align: center;
+        }
+    }
+    @media (min-width:768px) and (max-width:1267px) {
+        background-size: 300%;
+    }
+    @media (max-width:767px) {
+        background-size: 1190%;
     }
 }
+
 .footer__wrapper {
     display: flex;
     padding-top: 40px;
     gap: 80px;
+    @media (max-width:1267px) {
+        flex-direction: column;
+        gap: 0;
+        padding-top: 40px;
+    }
+}
+.footer__contacts {
+    display: flex;    
+    gap: 190px;
+    align-items: flex-start;
+    margin-bottom: 40px;
+    @media (min-width:768px) and (max-width:1267px) {
+        gap: 60px;
+        justify-content: space-evenly;
+    }
+    @media (max-width:767px) {
+        gap: 0;
+        flex-direction: column;
+    }
 }
 .footer__item {
     display: flex;
     flex-direction: column;
-    flex: 1;
+    flex: 0 0 300px;
     gap: 40px;
+    @media (max-width:767px) {
+        flex: 0 0 250px;
+    }
 }
+
 .footer__img {
+    display: flex;
     background-image: url('../../img/footer-puppy.png');
-    background-position: top 10px right;
+    background-position: top 8px right;
     background-repeat: no-repeat;
+    @media (min-width:768px) and (max-width:1267px) {
+        background-position: center top 10px;
+    }
+    @media (max-width:767px) {
+        background-size: 90%;
+        background-position: right 20px top 10px;
+    }
 }
+
 .contacts__item {
     display: flex;
     align-items: center;
@@ -28,7 +70,4 @@
     h4 {
         color: $color-primary;
     }
-}
-.contacts__item_last {
-    margin-bottom: 40px;
 }

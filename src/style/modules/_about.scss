@@ -8,6 +8,10 @@
     justify-content: center;
     gap: 90px;
     padding: 0 135px;
+    @media (max-width:1267px) {
+        flex-direction: column;
+        gap: 30px;
+    }
 }
 
 .about__title {
@@ -19,10 +23,16 @@
     flex-direction: column;
     gap: 20px;
     flex: 1;
+    @media (max-width:1267px) {
+        gap: 0;
+    }
 }
 
 .about__img {
     flex: 1;
     max-height: 400px;
     object-fit: contain;
+    @media (max-width:1267px) {
+        order: 1;
+    }
 }

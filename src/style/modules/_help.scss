@@ -1,6 +1,6 @@
 .help {
     @include lightBg;
-    padding: 80px 80px;
+    padding: 80px 15px;
     }
 .help__container {
     display: flex;
@@ -8,6 +8,11 @@
     justify-content: space-around;
     gap: 100px;
     margin-bottom: 50px;
+    @media    (max-width:767px) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 50px;
+    }
 }
 .help__title {
     margin-bottom: 80px;

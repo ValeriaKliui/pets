@@ -8,10 +8,20 @@
     justify-content: center;
     gap: 30px;
     padding: 0 135px;
+    @media  (min-width:768px) and (max-width:1267px) {
+        flex-direction: column;
+    }
+    @media (max-width:767px) {
+        flex-direction: column;
+        padding: 0 20px;
+    }
 }
 
 .donations__title {
     max-width: 310px;
+    @media (max-width:767px) {
+        text-align: center;
+    }
 }
 
 .donations__text {
@@ -21,12 +31,25 @@
     flex: 1;
 }
 
+.donation__description {
+    @media    (max-width:1267px) {
+        max-width: 400px;
+    } 
+}
 .donations__img {
     flex: 1;
     max-height: 260px;
     object-fit: contain;
     display: block;
+
+    @media    (max-width:1267px) {
+        order: 1;
+    }
+    @media    (max-width:767px) {
+        max-height: 135px;
+    }
 }
+
 .bank_info {
     display: flex;
     max-width: 310px;

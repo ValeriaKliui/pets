@@ -24,7 +24,7 @@ a {
     }
 }
 
-.active {
+.active_link {
     border-bottom: 3px solid $color-primary;
 }
 
@@ -39,16 +39,25 @@ ul {
 h2 {
     @include makeFonts(400, 44px, 130%, $color: $color-light-xl);
     font-weight: 400;
+    @media (max-width:767px) {
+        font-size: 25px;
+    }
 }
 
 h3 {
     @include makeFonts(400, 35px, 130%, $letter-spacing: 0.06em);
     font-weight: 400;
+    @media (max-width:767px) {
+        font-size: 25px;
+    }
 }
 
 h4 {
     @include makeFonts(400, 20px, 115%, $letter-spacing: 0.06em, $color: $color-dark-l);
     font-weight: 400;
+    @media (max-width:767px) {
+        font-size: 20px;
+    }
 }
 
 h5 {
@@ -140,6 +149,12 @@ background-position: center;
     max-width: 1280px;
     margin: 0 auto;
     padding: 0 40px;
+    @media (min-width:768px) and (max-width:1267px) {
+        padding: 0 30px;
+    }
+    @media (max-width:767px) {
+        padding: 0 10px;
+    }
 }
 
 .logo {
@@ -156,12 +171,21 @@ background-position: center;
     //   background-position: center;
     background-attachment: fixed;
     /* !!! */
+    @media  (max-width:1267px) {
+        background-size: unset;
+    }
 }
 
 .slider {
     display: flex;
     gap: 90px;
     align-items: center;
+    @media  (max-width:1267px) {
+        gap: 25px;
+    } 
+    @media (max-width:767px) {
+        flex-direction: column;
+    }
 }
 .pets__card {
     display: flex;
@@ -172,7 +196,8 @@ background-position: center;
     gap: 30px;
     &:hover {
         background-color:$color-light-xl;
-    }
+        transform: scale(1.1)	
+        }
 
 }
 
