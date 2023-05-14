@@ -1,15 +1,11 @@
 .footer {
     background-image: url('../../img/footer.png');
     background-repeat: no-repeat;
-    h3 {
-        color: $color-light-xl;
-        @media (max-width:767px) {
-            text-align: center;
-        }
-    }
-    @media (min-width:768px) and (max-width:1267px) {
+
+    @media (min-width:767px) and (max-width:1267px) {
         background-size: 300%;
     }
+
     @media (max-width:767px) {
         background-size: 1190%;
     }
@@ -19,34 +15,44 @@
     display: flex;
     padding-top: 40px;
     gap: 80px;
+
     @media (max-width:1267px) {
         flex-direction: column;
         gap: 0;
         padding-top: 40px;
     }
 }
+
 .footer__contacts {
-    display: flex;    
+    display: flex;
     gap: 190px;
     align-items: flex-start;
     margin-bottom: 40px;
-    @media (min-width:768px) and (max-width:1267px) {
+
+    @media (min-width:767px) and (max-width:1267px) {
         gap: 60px;
         justify-content: space-evenly;
     }
+
     @media (max-width:767px) {
         gap: 0;
         flex-direction: column;
     }
 }
+
 .footer__item {
     display: flex;
     flex-direction: column;
     flex: 0 0 300px;
     gap: 40px;
+
     @media (max-width:767px) {
         flex: 0 0 250px;
     }
+}
+
+.footer__title {
+    color: $color-light-xl;
 }
 
 .footer__img {
@@ -54,9 +60,11 @@
     background-image: url('../../img/footer-puppy.png');
     background-position: top 8px right;
     background-repeat: no-repeat;
+
     @media (min-width:768px) and (max-width:1267px) {
         background-position: center top 10px;
     }
+
     @media (max-width:767px) {
         background-size: 90%;
         background-position: right 20px top 10px;
@@ -67,6 +75,7 @@
     display: flex;
     align-items: center;
     gap: 15px;
+
     h4 {
         color: $color-primary;
     }

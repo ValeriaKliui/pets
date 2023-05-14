@@ -1,29 +1,40 @@
 .help {
     @include lightBg;
     padding: 80px 15px;
-    }
+}
+
 .help__container {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
     gap: 100px;
     margin-bottom: 50px;
-    @media    (max-width:767px) {
+
+    @media (max-width:767px) {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 50px;
+        gap: 80px;
+        justify-items: center;
     }
 }
+
 .help__title {
     margin-bottom: 80px;
 }
+
 .help__item {
     align-items: center;
     justify-content: center;
     text-align: center;
     display: flex;
     flex-direction: column;
-  width: 100px;
-  height: 100px;
-  gap: 30px;
+    width: 100px;
+    height: 100px;
+    gap: 30px;
+    transition: all 0.15s ease-in-out;
+
+    &:hover {
+        transform: scale(1.1);
+        cursor: url('../../img/icons/cursor.svg'), pointer;
+    }
 }

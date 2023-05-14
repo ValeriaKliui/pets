@@ -10,6 +10,7 @@
 </head>
 
 <body>
+  <div class="shadowing hidden"></div>
   <header class="header">
     <div class="wrapper header__wrapper">
       <a href="index.html" class="link">
@@ -26,7 +27,7 @@
         <ul class="list navigation__list">
           <li class="item">
             <p class="paragraph-l">
-            <a href="index.html">
+            <a href="#about">
               About the shelter
             </a>
             </p>
@@ -40,20 +41,26 @@
           </li>
           <li class="item">
             <p class="paragraph-l">
-            <a href="#">
+            <a href="#help">
               Help the shelter
             </a>
             </p>
           </li>
           <li class="item">
             <p class="paragraph-l">
-            <a href="#">
-              Contacts
+            <a href="#donations">
+              Donations
             </a>
             </p>
           </li>
         </ul>
       </nav>
+      <div class="burger">
+        <span class="burger__line"></span>
+        <span class="burger__line"></span>
+        <span class="burger__line"></span>
+      </div>
+      <div class="menu_mobile hidden"></div>
     </div>
   </header>
   <main>
@@ -74,7 +81,7 @@
         <div class="start-screen__img"></div>
       </div>
     </section>
-    <section class="about">
+    <section class="about" id="about">
       <div class="wrapper about__wrapper">
         <img src="../src/img/about-pets.png" alt="about pets" class="about__img">
         <div class="about__text">
@@ -104,9 +111,8 @@
           </h3>
         </div>
         <div class="slider">
-          <button class="arrow arrow_left">
-
-          </button>
+          <button class="arrow arrow_left"></button>
+          <div class="slides__container">
           <div class="pets__card">
             <img src="../src/img/pets-katrine.png" alt="pets-katrine">
             <p class="pets-card-title">
@@ -134,16 +140,19 @@
               Learn more
             </button>
           </div>
-          <button class="arrow arrow_right">
-            
-          </button>
+        </div>
+          <button class="arrow arrow_right"></button>
+          <div class="slider__arrows_mobile hidden">
+            <button class="arrow arrow_left"></button>
+            <button class="arrow arrow_right"></button>
+          </div>
         </div>
         <button class="button">
           Get to know the rest
         </button>
       </div>
     </section>
-    <section class="help">
+    <section class="help" id="help">
       <div class="wrapper">
         <div class="wrapper__title">
           <h3 class="pets__title help__title">
@@ -208,7 +217,7 @@
         </div>
       </div>
     </section>
-    <section class="donations">
+    <section class="donations" id="donations">
       <div class="wrapper donations__wrapper">
         <img src="../src/img/donation-dog.png" alt="about donations" class="donations__img">
         <div class="donations__text">
@@ -235,7 +244,7 @@
     <div class="wrapper footer__wrapper">
       <div class="footer__contacts">
       <div class="footer__item">
-        <h3>
+        <h3 class="footer__title">
           For questions and suggestions
         </h3>
         <div class="contacts__item">
@@ -252,7 +261,7 @@
         </div>
       </div>
       <div class="footer__item">
-        <h3>
+        <h3 class="footer__title">
           We are waiting for your visit
         </h3>
         <div class="contacts__item">
@@ -269,9 +278,7 @@
         </div>
       </div>
     </div>
-      <div class="footer__item footer__img">
-
-      </div>
+    <div class="footer__item footer__img"></div>
     </div>
   </footer>
 </body>

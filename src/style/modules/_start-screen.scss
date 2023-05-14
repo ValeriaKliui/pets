@@ -1,18 +1,22 @@
 .start-screen__wrapper {
     display: flex;
-    @media  (min-width: 768px) and  (max-width:1267px) {
+
+    @media (min-width: 767px) and (max-width:1267px) {
         flex-direction: column;
         padding: 50px 60px 0 60px;
     }
-    @media    (max-width:767px) {
+
+    @media (max-width:767px) {
         flex-direction: column;
     }
+
     button {
-        @media    (max-width:1267px) {
+        @media (max-width:1267px) {
             align-self: center;
         }
     }
 }
+
 .start-screen__text {
     display: flex;
     flex-direction: column;
@@ -20,18 +24,20 @@
     flex: 1;
     min-height: 800px;
     justify-content: center;
-    @media  (min-width: 768px) and (max-width:1267px) {
+
+    @media (min-width: 767px) and (max-width:1267px) {
         min-height: 0;
         padding: 0 65px;
     }
-    @media    (max-width:767px) {
+
+    @media (max-width:767px) {
         padding: 0;
         min-height: 0;
         align-items: center;
         justify-content: center;
         text-align: center;
     }
-}    
+}
 
 
 .start-screen__img {
@@ -39,13 +45,15 @@
     background-image: url('../../img/start-screen-puppy.png');
     background-position: top 100px right;
     background-repeat: no-repeat;
-    @media    (min-width: 768px) and  (max-width:1267px) {
-    flex: 2 2 700px;
-    background-position: center top 100px;
-}
-@media    (max-width: 768px) {
-    flex: 2 2 350px;
-    background-size: 80%;
-    background-position: right top 100px;
-}
+
+    @media (min-width: 767px) and (max-width:1267px) {
+        flex: 2 2 700px;
+        background-position: center top 100px;
+    }
+
+    @media (max-width: 768px) {
+        flex: 2 2 350px;
+        background-size: 80%;
+        background-position: right top 100px;
+    }
 }

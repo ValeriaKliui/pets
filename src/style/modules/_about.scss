@@ -16,6 +16,10 @@
 
 .about__title {
     max-width: 370px;
+    text-align: center;
+    @media (max-width:767px) {
+        max-width: unset;
+    }
 }
 
 .about__text {
@@ -23,6 +27,7 @@
     flex-direction: column;
     gap: 20px;
     flex: 1;
+    align-items: center;
     @media (max-width:1267px) {
         gap: 0;
     }

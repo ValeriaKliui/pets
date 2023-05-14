@@ -15,13 +15,13 @@ html {
 a {
     text-decoration: none;
     color: $color-dark-s;
-
     &:hover,
     &:active {
         border-bottom: 3px solid $color-primary;
         cursor: url('../../img/icons/pointer.svg'), pointer;
         margin-bottom: -3px;
-    }
+    	transition:  all 0.15s ease-in-out;
+}
 }
 
 .active_link {
@@ -34,11 +34,13 @@ img {
 
 ul {
     list-style-type: none;
+    padding: 0;
 }
 
 h2 {
     @include makeFonts(400, 44px, 130%, $color: $color-light-xl);
     font-weight: 400;
+
     @media (max-width:767px) {
         font-size: 25px;
     }
@@ -47,6 +49,7 @@ h2 {
 h3 {
     @include makeFonts(400, 35px, 130%, $letter-spacing: 0.06em);
     font-weight: 400;
+
     @media (max-width:767px) {
         font-size: 25px;
     }
@@ -55,6 +58,7 @@ h3 {
 h4 {
     @include makeFonts(400, 20px, 115%, $letter-spacing: 0.06em, $color: $color-dark-l);
     font-weight: 400;
+
     @media (max-width:767px) {
         font-size: 20px;
     }
@@ -104,20 +108,24 @@ button {
     max-width: 265px;
     display: block;
     @include makeFonts(400, 17px, 130%, $letter-spacing: 0.06em, $color: $color-dark-3xl);
-
+	transition:  all 0.25s ease-in-out;
     &:hover,
     &:active {
         cursor: url('../../img/icons/pointer.svg'), pointer;
         background-color: $color-primary-light;
+        transition:  all 0.15s ease-in-out;
     }
 }
+
 .disabled {
     background-color: transparent;
     border: 3px solid $color-primary;
+
     &:hover {
         border: 3px solid $color-primary-light;
     }
 }
+
 .active {
     cursor: url('../../img/icons/pointer.svg'), pointer;
     background-color: $color-primary-light;
@@ -127,20 +135,23 @@ button {
 .arrow {
     background-color: transparent;
     border: 3px solid $color-primary;
-border-radius: 100px;
-width: 52px;
-height: 52px;
-padding: 0;
-background-image: url(/src/img/icons/Arrow.svg);
-background-repeat: no-repeat;
-background-position: center;
-&:hover {
-    border: 3px solid $color-primary-light;
+    border-radius: 100px;
+    width: 52px;
+    height: 52px;
+    padding: 0;
+    background-image: url(/src/img/icons/Arrow.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+
+    &:hover {
+        border: 3px solid $color-primary-light;
+    }
 }
-}
+
 .arrow_right {
     transform: rotate(180deg);
 }
+
 .arrow_unactive {
     border: 3px solid $color-dark-s;
 }
@@ -149,11 +160,15 @@ background-position: center;
     max-width: 1280px;
     margin: 0 auto;
     padding: 0 40px;
-    @media (min-width:768px) and (max-width:1267px) {
-        padding: 0 30px;
+
+    @media (min-width:767px) and (max-width:1267px) {
+        padding-left: 30px;
+        padding-right: 30px;
     }
+
     @media (max-width:767px) {
-        padding: 0 10px;
+        padding-left: 15px;
+        padding-right: 15px;
     }
 }
 
@@ -170,8 +185,9 @@ background-position: center;
     background-repeat: no-repeat;
     //   background-position: center;
     background-attachment: fixed;
+
     /* !!! */
-    @media  (max-width:1267px) {
+    @media (max-width:1267px) {
         background-size: unset;
     }
 }
@@ -180,13 +196,35 @@ background-position: center;
     display: flex;
     gap: 90px;
     align-items: center;
-    @media  (max-width:1267px) {
+    
+    @media (max-width:1267px) {
         gap: 25px;
-    } 
+    }
+
     @media (max-width:767px) {
         flex-direction: column;
     }
 }
+.slides__container {
+    display: flex;
+    gap: 90px;
+    align-items: center;
+
+    @media (max-width:1267px) {
+        gap: 25px;
+    }
+}
+.slider__arrows_mobile {
+    @media (min-width:768px) and (max-width:1267px) {
+        display: none;
+    }
+
+    @media (max-width:767px) {
+        display: flex;
+        gap: 70px;
+    }
+}
+
 .pets__card {
     display: flex;
     flex-direction: column;
@@ -194,20 +232,25 @@ background-position: center;
     background-color: $color-light-s;
     padding-bottom: 30px;
     gap: 30px;
+	transition:  all 0.15s ease-in-out;
+    
     &:hover {
-        background-color:$color-light-xl;
-        transform: scale(1.1)	
-        }
+        background-color: $color-light-xl;
+        transform: scale(1.1);
+        cursor: url('../../img/icons/pointer.svg'), pointer;
+    }
 
 }
 
-
-// @media {
-//     //для мобилки 
-//     h3 {
-// @include makeFonts(400, 25px, 130%, $letter-spacing: 0.06em);
-//     }
-//     .paragraph-mobile-menu {
-// @include makeFonts(400, 32px, 160%, 'Arial Regular');
-//     }
-// }
+.hidden {
+    display: none;
+}
+.stop-scroll {
+    overflow-y: hidden;
+}
+.shadowing {
+    background-color: $shadow;
+    height: 120%;
+    width: 100%;
+    position: absolute
+}
