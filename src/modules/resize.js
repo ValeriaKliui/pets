@@ -1,11 +1,6 @@
 function resize(e) {
     let windowWidth = document.documentElement.clientWidth;
     let slider = document.querySelector('.slider');
-    let sliderItems = slider ? slider.querySelectorAll('.pets__card') : null;
-    let sliderItemsAmount = 0;
-    let mobileArrowsContainer = document.querySelector('.slider__arrows_mobile');
-    let arrowsDesk = slider ? slider.querySelectorAll('.arrow') : null;
-    let arrowMobile = mobileArrowsContainer ? mobileArrowsContainer.querySelectorAll('.arrow') : null;
 
     let gallery = document.querySelector('.gallery');
     let galleryItems = gallery ? gallery.querySelectorAll('.pets__card') : null;

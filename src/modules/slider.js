@@ -49,7 +49,7 @@ function makeSlider() {
                 ITEM_ACTIVE.firstElementChild.remove();
                 ITEM_LEFT.classList.add('left__card');
             }
-            
+
             SLIDES_CONTAINER.classList.remove('transition_left');
             SLIDES_CONTAINER.classList.remove('transition_right');
             BTN_LEFT.addEventListener('click', moveLeft);
@@ -58,4 +58,4 @@ function makeSlider() {
     }
 }
 
-export { makeSlider }
+export { makeSlider}

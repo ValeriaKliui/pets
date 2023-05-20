@@ -10,8 +10,11 @@
     @media (min-width:767px) and (max-width:1267px) {
         gap: 40px;
      }
+     @media (max-width:766px) {
+        gap: 30px;
+    }
     .button_info {
-        @media (min-width:767px) and (max-width:1267px) {
+        @media (min-width:768px) and (max-width:1267px) {
            display: none;
            gap: 40px;
         }
@@ -41,7 +44,7 @@
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 1fr);
     gap: 40px;
-    @media (min-width:767px) and (max-width:1267px) {
+    @media (min-width:768px) and (max-width:1267px) {
         grid-template-columns: repeat(2, 1fr);
     }
     @media (max-width:767px) {
