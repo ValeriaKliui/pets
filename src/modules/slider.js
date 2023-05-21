@@ -58,4 +58,4 @@ function makeSlider() {
     }
 }
 
-export { makeSlider}
+export { makeSlider, SLIDER}

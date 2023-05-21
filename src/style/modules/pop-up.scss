@@ -3,7 +3,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: $color-dark-3xl;
 }
 .pop-up__wrapper {
 
@@ -48,9 +47,16 @@ flex-direction: column;
     max-width: 900px;
     border-radius: 9px;
     display: flex;
-    justify-content: center;
     h3, h4, h5 {
         color: $color-black;
+    }
+    @media (min-width:768px) and (max-width:1267px) {
+        max-width: 630px;
+        flex: 0 0 350px;
+    }
+    @media (max-width:767px) {
+        max-width: 271px;
+        max-height: 361px;
     }
 }
 .close__line_left {
@@ -59,22 +65,61 @@ flex-direction: column;
 .close__line_right{
     transform: rotate(135deg);
 }
-.card__text{
-    padding: 50px 20px 0 30px;
-}
 .card__title {
     margin-bottom: 10px;
+    @media (max-width:767px) {
+        font-size: 35px;
+    }
 }
 .card__subtitle,
-.card__subscription {
+.card__description {
     margin-bottom: 40px;
-}
+    @media (min-width:768px) and (max-width:1267px) {
+        margin-bottom: 20px;
+    }
+    @media (max-width:767px) {
+        margin-bottom: 20px;
+    }
+    }
 .card__photo {
-    flex: 0 0 500px;
+    flex: 0 0 400px;
+    display: flex;
+    justify-content: center;
+    background-color: $color-light-s;
+    border-radius: 9px;
+    @media (min-width:768px) and (max-width:1267px) {
+        flex: 0 0 300px;
+    }
+    @media (max-width:767px) {
+        display: none;
+    }
+}
+.card__img {
+object-fit: cover;
+border-radius: 9px;
+@media (min-width:768px) and (max-width:1267px) {
+    flex: 0 0 300px;
+    width: 100%;
+}
+@media (max-width:767px) {
+
+}
 }
 .card__text {
+    padding: 50px 20px 0 30px;
     display: flex;
     flex-direction: column;
+    @media (min-width:768px) and (max-width:1267px) {
+        flex: 0 0 300px;
+        width: 100%;
+        padding: 10px 15px;
+    }
+    @media (max-width:767px) {
+        align-items: center;
+        padding: 10px;
+        text-align: justify;
+        justify-content: center;
+    }
 }
 .item_bold {
     font-weight: 700;
@@ -96,5 +141,8 @@ flex-direction: column;
         position: absolute;
         top: 50%;
         left: -10px;
+    }
+    @media (max-width:767px) {
+        margin-bottom: 6px;
     }
 }

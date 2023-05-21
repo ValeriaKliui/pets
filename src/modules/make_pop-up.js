@@ -1,5 +1,5 @@
 let slider = document.querySelector('.slider');
-let popUp = document.querySelector('.pop-up');
+const POP_UP = document.querySelector('.pop-up');
 let popUpWrapper = document.querySelector('.pop-up__wrapper');
 let petsCards = slider.querySelector('.pets__card')
 let closeButton = document.querySelector('.close');
@@ -36,4 +36,4 @@ function setMargin(){
     margin = (window.innerWidth - 1100 )/2;
     return margin;
 }
-export { makePopUp }
+export { makePopUp, POP_UP }
