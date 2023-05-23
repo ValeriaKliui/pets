@@ -8,6 +8,7 @@ import { shineActiveButton } from './modules/active-pet_card';
 import {resize } from './modules/resize';
 import {makeSlider} from './modules/slider';
 import { makePopUp } from './modules/make_pop-up';
+import { makePagination } from './modules/pagination';
 import { cardTemplate } from './modules/opened_pop-up';
 import './modules/opened_pop-up';
 
@@ -22,3 +23,4 @@ makeSlider();
 document.addEventListener('click', makePopUp);
 
 cardTemplate();
+makePagination();

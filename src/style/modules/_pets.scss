@@ -39,7 +39,7 @@
     @include makeFonts(400, 20px, 23px, $letter-spacing: 0.06em);
 }
 
-.gallery {
+.gallery__wrapper {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 1fr);

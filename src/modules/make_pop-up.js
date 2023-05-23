@@ -1,13 +1,13 @@
 let slider = document.querySelector('.slider');
 const POP_UP = document.querySelector('.pop-up');
 let popUpWrapper = document.querySelector('.pop-up__wrapper');
-let petsCards = slider.querySelector('.pets__card')
+let petsCards = document.querySelector('.pets__card')
 let closeButton = document.querySelector('.close');
 let margin = (window.innerWidth - 1000)/2;
 window.addEventListener('resize',setMargin);
 
 let shadow = document.querySelector('.shadowing');
-closeButton.classList.add('hidden');
+if (closeButton) closeButton.classList.add('hidden');
 
 function makePopUp(event) {
     let target = event.target;
@@ -15,14 +15,14 @@ function makePopUp(event) {
     if (target.closest('.pop-up')) {
         return null
     }
-    if (!itIsCard)
+    if (!itIsCard && closeButton)
     {
         closeButton.classList.add('hidden');
         popUpWrapper.classList.add('hidden');
         popUpWrapper.classList.remove('pop-up__wrapper_centered');
         document.body.classList.remove('stop-scroll');
     }
-    if (itIsCard)
+    if (itIsCard && closeButton)
     {
         closeButton.classList.remove('hidden');
         closeButton.style.marginRight = `${margin}px`;

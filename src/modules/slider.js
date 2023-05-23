@@ -5,6 +5,13 @@ const ITEM_LEFT = document.querySelector('.left__card');
 const ITEM_RIGHT = document.querySelector('.right__card')
 const ITEM_ACTIVE = document.querySelector('.active__cards')
 
+window.addEventListener('resize', setAmountOfCards);
+function setAmountOfCards(){
+    let windowWidth = document.documentElement.clientWidth;
+    console.log(windowWidth)
+}
+
+
 function makeSlider() {
     if (SLIDER) {
         const moveLeft = () => {

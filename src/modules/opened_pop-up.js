@@ -2,17 +2,19 @@ import petsInfo from './pets.json';
 import { POP_UP } from './make_pop-up'
 import { SLIDER } from './slider';
 
-const PETS_CARD = POP_UP.querySelector('.card');
-const PET_PHOTO = PETS_CARD.querySelector('.card__img');
-const PET_NAME = PETS_CARD.querySelector('.card__title');
-const PET_TYPE = PETS_CARD.querySelector('.card__subtitle');
-const PET_DESCRIPTION = PETS_CARD.querySelector('.card__description');
-const PET_AGE = PETS_CARD.querySelector('.age');
-const PET_INOCULATIONS = PETS_CARD.querySelector('.inoculations');
-const PET_DISEASES = PETS_CARD.querySelector('.diseases');
-const PET_PARASITES = PETS_CARD.querySelector('.parasites');
+const PETS_CARD = document.querySelector('.card');
+const PET_PHOTO = document.querySelector('.card__img');
+const PET_NAME = document.querySelector('.card__title');
+const PET_TYPE = document.querySelector('.card__subtitle');
+const PET_DESCRIPTION = document.querySelector('.card__description');
+const PET_AGE = document.querySelector('.age');
+const PET_INOCULATIONS = document.querySelector('.inoculations');
+const PET_DISEASES = document.querySelector('.diseases');
+const PET_PARASITES = document.querySelector('.parasites');
 
+if (SLIDER) {
 SLIDER.addEventListener('click', cardTemplate)
+}
 
 function cardTemplate(event) {
     if (event) {

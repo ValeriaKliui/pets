@@ -1,19 +1,11 @@
 function resize(e) {
     let windowWidth = document.documentElement.clientWidth;
     let slider = document.querySelector('.slider');
-
-    let gallery = document.querySelector('.gallery');
-    let galleryItems = gallery ? gallery.querySelectorAll('.pets__card') : null;
-    let galleryItemsAmount = 0;
-
     let burger = document.querySelector('.burger');
     let menuMobile = document.querySelector('.menu_mobile');
 
     if (windowWidth <= 767) {
-        if (gallery) {
-            galleryItemsAmount = 3;
-            galleryItems.forEach((elem, index) => { if (index >= galleryItemsAmount) elem.classList.add('hidden') })
-        }
+
         if (burger) {
             let nav = document.querySelector('.nav');
             let navMobile = nav.cloneNode(true);
